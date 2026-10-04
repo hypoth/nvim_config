@@ -1,0 +1,14 @@
+{
+  "default_provider": "gemini",
+  "server": {
+    "host": "127.0.0.1",
+    "port": 8118,
+    "secure": false
+  },
+  "providers": {
+    "gemini": {
+      "api_key": "YOUR_GEMINI_API_KEY",
+      "default_model": "gemini-1.5-pro"
+    }
+  }
+}

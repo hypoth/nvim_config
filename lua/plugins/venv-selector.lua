@@ -1,7 +1,7 @@
 return {
   {
     "linux-cultist/venv-selector.nvim",
-    branch = "regexp",
+    --branch = "regexp",
     dependencies = { "neovim/nvim-lspconfig", "nvim-telescope/telescope.nvim", "mfussenegger/nvim-dap-python" },
     opts = {
       dap_enabled = true, -- keeps nvim-dap-python's interpreter in sync with the selected venv

@@ -1,0 +1,26 @@
+[plugin]
+prepend_previewers = [
+  # Markdown preview using glow
+  #{ mime = "text/markdown", run = "piper" },
+  #{ mime = "text/x-markdown", run = "piper" },
+  # PDF preview (built-in, poppler handles this)
+  { mime = "application/pdf", run = "pdf" },
+  { url = "*.md", run = 'piper -- rich -j --left --panel=rounded --guides --line-numbers --force-terminal "$1"'},
+]
+
+# Define the custom mdt terminal application opener
+[opener]
+mdt_terminal = [
+    { run = '/home/vp/.cargo/bin/mdt "$@"', block = true, desc = "Open in mdt" }
+]
+mdterm_terminal = [
+    { run = '/home/vp/.cargo/bin/mdterm %s', block = true, desc = "Open in mdterm" }
+]
+
+
+# Tell Yazi to prioritize this opener for markdown files
+[open]
+prepend_rules = [
+    { url = "*.md", use = "mdterm_terminal" },
+    { url = "*.markdown", use = "mdt_terminal" }
+]

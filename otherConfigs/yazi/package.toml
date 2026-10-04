@@ -1,0 +1,12 @@
+[[plugin.deps]]
+use = "pakhromov/to-pdf-preview"
+rev = "3d52710"
+hash = "2269e79e3fbe8ff7b41aa8fc04737397"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:piper"
+rev = "4dc7f1b"
+hash = "45a533508a9840cc5a10cf6129f63e6a"
+
+[flavor]
+deps = []
